@@ -1,21 +1,5 @@
 # T-FLIPFLOP-POSEDGE
 
-**AIM:**
-
-To implement  T flipflop using verilog and validating their functionality using their functional tables
-
-**SOFTWARE REQUIRED:**
-
-Quartus prime
-
-**THEORY**
-
-**T Flip-Flop**
-
-T flip-flop is the simplified version of JK flip-flop. It is obtained by connecting the same input ‘T’ to both inputs of JK flip-flop. It operates with only positive clock transitions or negative clock transitions. The circuit diagram of T flip-flop is shown in the following figure.
-
-![image](https://github.com/naavaneetha/T-FLIPFLOP-POSEDGE/assets/154305477/458a68fe-2d08-4a9d-ac4f-7ae0480ce0bd)
-
  
 This circuit has single input T and two outputs Qtt & Qtt’. The operation of T flip-flop is same as that of JK flip-flop. Here, we considered the inputs of JK flip-flop as J = T and K = T in order to utilize the modified JK flip-flop for 2 combinations of inputs. So, we eliminated the other two combinations of J & K, for which those two values are complement to each other in T flip-flop. The following table shows the state table of T flip-flop.
 
@@ -32,9 +16,9 @@ From the above characteristic table, we can directly write the next state equati
 
 
 ## **PROGRAM**
-Developed by:M.V.Vamsidhar Reddy
+Developed by:Pugazhalenthi V
 
-Register No:212224040205
+Register No:212224100047
 
 ```
 module pugal9(t, clk, rst, q);
@@ -42,3 +26,34 @@ module pugal9(t, clk, rst, q);
   output reg q;
 
   always @(posedge clk or posedge rst) 
+begin
+    if (rst)
+      q <= 0; 
+    else if (t==0)
+      q <= q; 
+     else
+        q<=~q;
+  end
+endmodule
+
+Developed by: M.V.Vamsidhar Reddy
+RegisterNumber: 212224040205
+
+
+
+```
+
+
+**RTL LOGIC FOR FLIPFLOPS**
+
+![image](https://github.com/user-attachments/assets/115c8aec-7de0-4541-80ff-c0f3950a5b1e)
+
+
+**TIMING DIGRAMS FOR FLIP FLOPS**
+
+![image](https://github.com/user-attachments/assets/ae289843-61d0-44a7-bd0c-4993d104b81e)
+
+
+**RESULTS**
+
+implementation of T flipflop using verilog and validating their functionality using their functional tables
