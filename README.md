@@ -28,15 +28,17 @@ From the above characteristic table, we can directly write the next state equati
 
 **Procedure**
 
-/* write all the steps invloved */
+![Screenshot 2025-05-06 094114](https://github.com/user-attachments/assets/0aca1749-7127-4957-a513-50ff81567478)
 
-**PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+## **PROGRAM**
+Developed by:M.V.Vamsidhar Reddy
 
-**RTL LOGIC FOR FLIPFLOPS**
+Register No:212224040205
 
-**TIMING DIGRAMS FOR FLIP FLOPS**
+```
+module pugal9(t, clk, rst, q);
+  input t, clk, rst;
+  output reg q;
 
-**RESULTS**
+  always @(posedge clk or posedge rst) 
